@@ -2,7 +2,7 @@
 
 template < typename T >
 BinNodePosi(T) BinNode<T>::succ() {
-    BinNodePosi x = this;
+    BinNodePosi(T) x = this;
     if ( rc ) {
         x = rc;
         while ( HasLChild( *(x) ) ) x = x->lc;

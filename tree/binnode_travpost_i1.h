@@ -1,6 +1,6 @@
 #pragma once
 
-template < typename VST, typename T >
+template < typename T >
 void goHLVFL ( stack<BinNodePosi(T)>& S ) {
     while ( BinNodePosi(T) x = S.top() ) {
         if ( HasLChild( *(x) ) ) {
@@ -12,12 +12,12 @@ void goHLVFL ( stack<BinNodePosi(T)>& S ) {
 }
 
 template < typename VST, typename T >
-void travPost ( VST& visit, BinNodePosi(T) x ) {
+void travPost_I1 ( VST& visit, BinNodePosi(T) x ) {
     stack<BinNodePosi(T)> S;
     if ( x ) S.push ( x );
 
     while ( ! S.empty() ) {
-        if ( S.top() != x ) goHLVFL ( S );
-        x = S.pop(); visit ( x->data );
+        if ( S.top() != x->parent ) goHLVFL ( S );
+        x = S.top(); S.pop(); visit ( x->data );
     }
 }

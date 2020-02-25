@@ -6,7 +6,7 @@
 template < typename T > template < typename VST >
 void BinNode<T>::travPost ( VST& visit ) {
     switch ( rand() % 2 ) {
-        case 0: travPost_I1 ( visit, this );
+        case 0: travPost_I1 ( visit, this ); break;
         default: travPost_R ( visit, this );
     }
 }

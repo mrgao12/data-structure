@@ -3,7 +3,7 @@
 template < typename T, typename VST >
 void visitAlongLeftBranch ( stack<BinNodePosi(T)>& S, VST& visit, BinNodePosi(T) x ) {
     while ( x ) {
-        visit ( x );
+        visit ( x->data );
         S.push ( x->rc );
         x = x->lc;
     }
