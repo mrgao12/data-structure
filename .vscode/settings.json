@@ -20,7 +20,9 @@
         "queue": "cpp",
         "initializer_list": "cpp",
         "utility": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "climits": "cpp",
+        "cstdio": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled"
 }
