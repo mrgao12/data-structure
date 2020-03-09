@@ -2,6 +2,7 @@
 
 #include <stack>
 #include <climits>
+#include <iostream>
 using namespace std;
 
 typedef enum { UNDISCOVERED, DISCOVERED, VISITED } VStatus;
@@ -24,6 +25,7 @@ class Graph {
         void BFS ( int, int& );
         void DFS ( int, int& );
         bool TSort ( int, int&, stack<Tv>* );
+        void BCC ( int, int&, stack<int>& );
     public:
         int n;
         virtual Tv& vertex ( int ) = 0;
@@ -50,6 +52,8 @@ class Graph {
         void bfs ( int );
         void dfs ( int );
         void prim ( int );
+        void dijkstra ( int );
+        void bcc ( int );
         stack<Tv>* tsort ( int );
 };
 
