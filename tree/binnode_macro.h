@@ -12,4 +12,4 @@
 
 #define sibling(p) ( IsLChild( *(p) ) ? p->parent->rc : p->parent->lc )
 #define uncle(p) ( IsLChild( *(p->parent) ) ? p->parent->parent->rc : p->parent->parent->lc )
-#define FromParentTo(p) ( IsRoot( *(p) ) ? _root : ( IsLChild( *(p) ) ? p->parent->lc : p->parent->rc ) )
+#define FromParentTo(p) ( IsRoot( *(p) ) ? BinTree<T>::_root : ( IsLChild( *(p) ) ? p->parent->lc : p->parent->rc ) )
